@@ -14,7 +14,8 @@
 }
 
 :root {
-  --head-size: 8vh;
+  --head-size: 15vh;
+  --content-size: calc(100vh - (var(--head-size) + 1vh));
 }
 
 * {
@@ -34,6 +35,7 @@
 
 .head {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
@@ -42,26 +44,58 @@
 }
 
 .head nav {
-  font-family: "Baskerville", sans-serif;
-  transition: all 0.1s ease;
+  height: 1vh;
+  padding: 0;
 }
 
+.head nav ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-.head nav:hover {
+.head li {
+  display: inline-block;
+  font-family: "Baskerville", sans-serif;
+  margin-right: 3em;
+  margin-left: 3em;
+  transition: all 0.2s ease;
+  transition: scale 0.1 ease;
+  
+}
+
+.head nav li a {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.head li:hover {
   border-bottom: 2px solid white;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.head li:active {
+  scale: 1.1;
+}
+
+.zoom {
+  scale: 1.2;
+  border-bottom: 2px solid white;
 }
 
 #content {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - (var(--head-size) + 1vh));
+  height: var(--content-size);
+  
 }
 
 .container {
   width: 25em;
   text-align: center;
+  animation: menu-container 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .container hr {
@@ -84,7 +118,41 @@
 }
 
 .btn-menu:active {
+  position: relative;
   color: white;
-  scale: 1.1;
-  box-shadow: 0 0 5px white;
+  margin-top: 1em;
+  background-color: #947548;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: var(--content-size);
+  background-color: #ffedd5;
+  color: black;
+  animation: menu-container 0.5s ease-in-out;
+  opacity: 1;
+}
+
+
+
+.menu-container .container {
+  margin-top: 3em;
+}
+
+.menu-container .container hr {
+  border: none;
+  height: 2px;
+  color: black;
+  background-color: black;
+}
+
+@keyframes menu-container {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
