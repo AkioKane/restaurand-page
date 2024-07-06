@@ -80,4 +80,8 @@ export class Load {
     this.item(container, "Margarita", "Сlassic Italian pizza, best tomato.", 15)
     this.item(container, "Cesadilia", "Chicken, Chicken", 30)
   }
+
+  static loadAbout() {
+    // func About
+  }
 }

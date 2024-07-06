@@ -88,13 +88,12 @@
   align-items: center;
   justify-content: center;
   height: var(--content-size);
-  
 }
 
 .container {
   width: 25em;
   text-align: center;
-  animation: menu-container 0.5s ease-in-out;
+  animation: container 0.5s ease-in-out;
   opacity: 1;
 }
 
@@ -131,7 +130,7 @@
   height: var(--content-size);
   background-color: #ffedd5;
   color: black;
-  animation: menu-container 0.5s ease-in-out;
+  animation: container 0.5s ease-in-out;
   opacity: 1;
 }
 
@@ -148,7 +147,7 @@
   background-color: black;
 }
 
-@keyframes menu-container {
+@keyframes container {
   0% {
       opacity: 0;
   }
