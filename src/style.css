@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-image: url("pizza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 8vh;
+  gap: 2em;
+}
+
+.head nav {
+  transition: all 0.2s ease;
+  
+}
+
+
+.head nav:hover {
+  text-decoration: 2px underline;
+  padding-bottom: 10px;
+}
+
+#content {
+  
+}
