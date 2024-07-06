@@ -14,7 +14,7 @@
 }
 
 :root {
-  --head-size: 15vh;
+  --head-size: 8em;
   --content-size: calc(100vh - (var(--head-size) + 1vh));
 }
 
@@ -44,13 +44,13 @@
 }
 
 .head nav {
-  height: 1vh;
   padding: 0;
 }
 
 .head nav ul {
   list-style-type: none;
   padding: 0;
+  height: 5vh;
 }
 
 .head li {
