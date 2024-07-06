@@ -1,14 +1,35 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("./fonts/Baskervville_SC/BaskervvilleSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Wittgenstein";
+  src: url("./fonts/Wittgenstein/Wittgenstein-VariableFont_wght.ttf");
+}
+
+:root {
+  --head-size: 8vh;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 .main {
-  background-image: url("pizza.jpg");
+  background-image: url("./assets/pizza.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   min-height: 100vh;
+  color: white;
+  font-family: "Baskerville";
 }
 
 .head {
@@ -16,21 +37,54 @@
   justify-content: center;
   align-items: center;
   color: white;
-  height: 8vh;
+  height: var(--head-size);
   gap: 2em;
 }
 
 .head nav {
-  transition: all 0.2s ease;
-  
+  font-family: "Baskerville", sans-serif;
+  transition: all 0.1s ease;
 }
 
 
 .head nav:hover {
-  text-decoration: 2px underline;
+  border-bottom: 2px solid white;
   padding-bottom: 10px;
 }
 
 #content {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - (var(--head-size) + 1vh));
+}
+
+.container {
+  width: 25em;
+  text-align: center;
+}
+
+.container hr {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.container p {
+  font-family: "Wittgenstein";
+}
+
+.btn-menu {
+  font-family: "Baskerville";
+  margin-top: 0.5em;
+  width: 12em;
+  height: 2.5em;
+  background-color: #c59d5f;
+  border: none;
+  transition: all 0.05s ease;
+}
+
+.btn-menu:active {
+  color: white;
+  scale: 1.1;
+  box-shadow: 0 0 5px white;
 }

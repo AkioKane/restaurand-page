@@ -1,3 +1,10 @@
 import './style.css';
+import { Load } from './load.js'
 
-console.log("Hello")
+const content = document.getElementById("content")
+
+function start() {
+  Load.loadContent()
+}
+
+start()
