@@ -137,7 +137,10 @@
 
 
 .menu-container .container {
-  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;;
+  margin-top: 2em;
 }
 
 .menu-container .container hr {
@@ -145,6 +148,24 @@
   height: 2px;
   color: black;
   background-color: black;
+}
+
+.menu-container .container-contacts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 25%;
+}
+
+.menu-container .container-contacts h1 {
+  margin-bottom: 0.5em;
+}
+
+.menu-container .container-contacts li {
+  text-align: start;
+  font-size: 20px;
+  margin-bottom: 0.5em;
 }
 
 @keyframes container {

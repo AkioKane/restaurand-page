@@ -9,6 +9,15 @@ export class Load {
     content.innerHTML = ""
   }
 
+  static contact(container, number) {
+    let ul = document.createElement("ul")
+    container.appendChild(ul)
+
+    let li = document.createElement("li")
+    li.innerHTML = number
+    ul.appendChild(li)
+  }
+
   static item(elementChild, name, text, ammout) {
     let item = document.createElement("div")
     item.classList.add("item")
@@ -99,5 +108,25 @@ export class Load {
     let p = document.createElement("p")
     p.innerHTML = "This site created with npm."
     container.appendChild(p)
+  }
+
+  static loadContacts() {
+    this.clear()
+
+    let contactContainer = document.createElement("div")
+    contactContainer.classList.add("menu-container")
+    content.appendChild(contactContainer)
+
+    let container = document.createElement("div")
+    container.classList.add("container-contacts")
+    contactContainer.appendChild(container)
+
+    let h1 = document.createElement("h1")
+    h1.innerHTML = "Contacts"
+    container.appendChild(h1)
+
+    this.contact(container, "8 952 652 52 52")
+    this.contact(container, "8 952 752 37 90")
+    this.contact(container, "8 952 316 75 25")
   }
 }

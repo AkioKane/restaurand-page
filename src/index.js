@@ -4,6 +4,7 @@ import { Load } from './load.js';
 const home = document.getElementById("home")
 const menu = document.getElementById("menu")
 const about = document.getElementById("about")
+const contact = document.getElementById("contacts")
 
 function start() {
   Load.loadHome();
@@ -16,6 +17,9 @@ function start() {
   });
   about.addEventListener("click", () => {
     Load.loadAbout();
+  })
+  contact.addEventListener("click", () => {
+    Load.loadContacts();
   })
 }
 
