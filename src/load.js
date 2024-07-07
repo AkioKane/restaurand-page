@@ -82,6 +82,22 @@ export class Load {
   }
 
   static loadAbout() {
-    // func About
+    this.clear()
+
+    let aboutContainer = document.createElement("div")
+    aboutContainer.classList.add("menu-container")
+    content.appendChild(aboutContainer)
+
+    let container = document.createElement("div")
+    container.classList.add("container")
+    aboutContainer.appendChild(container)
+
+    let h1 = document.createElement("h1")
+    h1.innerHTML = "ABOUT"
+    container.appendChild(h1)
+
+    let p = document.createElement("p")
+    p.innerHTML = "This site created with npm."
+    container.appendChild(p)
   }
 }
